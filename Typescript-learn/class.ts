@@ -22,6 +22,14 @@ class Point{
         return this.x;
     }
 
+    setX(value: number)
+    {
+        if(value <0)
+            throw new console.error('Value cannot be less than 0');
+            
+        this.x=value;
+
+    }
 
     // getDistance(another : Point)
     // {
@@ -36,4 +44,6 @@ let x=obj.getX();
 console.log(x);
 obj.draw();
 
+obj.setX(100);
+obj.draw();
 //X: 10, Y:20
