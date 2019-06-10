@@ -10,6 +10,10 @@ var Point = /** @class */ (function () {
     Point.prototype.draw = function () {
         console.log('X: ' + this.x + ', Y:' + this.y);
     };
+    // get x()
+    // {
+    //     return this._x;
+    // }
     Point.prototype.getX = function () {
         return this.x;
     };
@@ -23,9 +27,11 @@ var Point = /** @class */ (function () {
 var obj = new Point(10, 20);
 //obj.x=10;
 //obj.y=20;
-var x = obj.getX();
-console.log(x);
+var z = obj.getX();
+console.log(z);
 obj.draw();
 obj.setX(100);
 obj.draw();
+//let y=obj.x;
+//console.log(y);
 //X: 10, Y:20

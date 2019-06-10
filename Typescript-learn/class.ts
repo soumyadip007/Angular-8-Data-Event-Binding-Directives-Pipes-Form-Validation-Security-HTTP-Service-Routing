@@ -16,6 +16,10 @@ class Point{
 
     }
 
+    // get x()
+    // {
+    //     return this._x;
+    // }
 
     getX()
     {
@@ -40,10 +44,13 @@ class Point{
 let obj=new Point(10,20);
 //obj.x=10;
 //obj.y=20;
-let x=obj.getX();
-console.log(x);
+let z=obj.getX();
+console.log(z);
 obj.draw();
 
 obj.setX(100);
 obj.draw();
+
+//let y=obj.x;
+//console.log(y);
 //X: 10, Y:20
