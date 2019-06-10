@@ -4,15 +4,17 @@ class Point{
 
     draw(){
 
+        console.log('X: '+ this.x +', Y:'+ this.y);
+
     }
 
     getDistance(another : Point)
     {
-        
+
     }
 }
 
-let getDistance=(pointA : Point, pointB : Point) =>{
-
-   // console.log(pointAA.y);
-}
+let obj=new Point();
+obj.x=10;
+obj.y=20;
+obj.draw();
