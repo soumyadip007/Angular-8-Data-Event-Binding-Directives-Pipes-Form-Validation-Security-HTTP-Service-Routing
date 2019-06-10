@@ -1,7 +1,13 @@
 class Point{
+ //   private x: number;
+// private y: number;
 
-    constructor(public x?: number,public y?: number)
+   
+
+    constructor(private x?: number,private y?: number)
     {
+      //  this.x=x;
+     //   sthis.y=y;
     }
 
     draw(){
