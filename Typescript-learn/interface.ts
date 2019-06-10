@@ -10,6 +10,5 @@ let drawPoint=(point : Point) =>{
 
 drawPoint({
 x:1,
-y:2,
-
+y:2
 })
