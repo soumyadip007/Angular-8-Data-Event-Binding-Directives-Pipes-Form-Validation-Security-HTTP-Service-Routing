@@ -1,14 +1,14 @@
 class Point{
-    x: number;
-    y: number;
+    private x: number;
+    private y: number;
 
-    constructor()
+   
+
+    constructor(x?: number, y?: number)
     {
-        this.x=10;
-        this.y=20;
+        this.x=x;
+        this.y=y;
     }
-
-  
 
     draw(){
 
@@ -22,7 +22,7 @@ class Point{
     }
 }
 
-let obj=new Point();
+let obj=new Point(10,10);
 //obj.x=10;
 //obj.y=20;
 obj.draw();
