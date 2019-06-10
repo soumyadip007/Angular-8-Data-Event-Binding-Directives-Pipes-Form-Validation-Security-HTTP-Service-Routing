@@ -16,8 +16,9 @@ export class CourseComponent{
      //  courses=["C","JAVA","CPP"]
      courses;
 
-     constructor(){
-         let service=new CoursesService();
+     constructor(service : CoursesService){
+       //  let service=new CoursesService();
+    
          this.courses= service.getCourses();
      }
 
