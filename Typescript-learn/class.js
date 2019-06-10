@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var Point = /** @class */ (function () {
     //   private x: number;
     // private y: number;
@@ -24,6 +26,7 @@ var Point = /** @class */ (function () {
     };
     return Point;
 }());
+exports.Point = Point;
 var obj = new Point(10, 20);
 //obj.x=10;
 //obj.y=20;

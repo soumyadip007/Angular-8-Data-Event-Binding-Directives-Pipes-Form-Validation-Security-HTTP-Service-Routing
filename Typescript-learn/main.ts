@@ -1,3 +1,5 @@
+//import {LikeComponent} from 
+
 /*
 4 Typecasting
 let message;
