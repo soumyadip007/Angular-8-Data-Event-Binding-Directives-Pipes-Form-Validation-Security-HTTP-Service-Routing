@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CoursesService } from './courses.service';
 
 @Component({
     selector: 'courses' ,     // <div class="courses"> --->   .courses  & # for id
@@ -7,10 +8,19 @@ import { Component } from '@angular/core';
 export class CourseComponent{
 
     title="List of courses"
-
-    courses=["C","JAVA","CPPs"]
     getTitle(){
 
         return this.title
     }
+
+     //  courses=["C","JAVA","CPP"]
+     courses;
+
+     constructor(){
+         let service=new CoursesService();
+         this.courses= service.getCourses();
+     }
+
+
+    
 }
