@@ -10,7 +10,7 @@ var Point = /** @class */ (function () {
     };
     return Point;
 }());
-var obj = new Point(10, 10);
+var obj = new Point(10, 20);
 //obj.x=10;
 //obj.y=20;
 obj.draw();
