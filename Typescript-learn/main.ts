@@ -1,4 +1,9 @@
-//import {LikeComponent} from 
+import { LikeComponent } from './like.component';
+
+let obj=new LikeComponent(10,true);
+obj.onclick();
+console.log('Likescount:'+obj.count+' Selected: '+obj.selected);
+
 
 /*
 4 Typecasting

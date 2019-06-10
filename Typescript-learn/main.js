@@ -1,3 +1,9 @@
+"use strict";
+exports.__esModule = true;
+var like_component_1 = require("./like.component");
+var obj = new like_component_1.LikeComponent(10, true);
+obj.onclick();
+console.log('Likescount:' + obj.count + ' Selected: ' + obj.selected);
 /*
 4 Typecasting
 let message;
