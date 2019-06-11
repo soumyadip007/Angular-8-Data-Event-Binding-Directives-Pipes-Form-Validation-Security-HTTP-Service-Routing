@@ -10,6 +10,8 @@ import { CoursesService } from './courses.service';
      <div (click)="onDivClick()">
         <button class="btn btn-primary"  (click)="onClick($event)" >Event binding</button>
      </div>
+     <br><br>
+    <input class="form-control" #email (keyup.enter)="onKeyUpp(email.value)"  /> 
      `
 })
 export class CourseComponent{
@@ -40,5 +42,14 @@ export class CourseComponent{
      {
          console.log("Div is clicked");
      }
+
+    //  onKeyUpp($event)
+    //  {
+    //      console.log("Enter is pressed & value is",$event.target.value);
+    //  }
     
+    onKeyUpp(email)
+    {
+        console.log("Enter is pressed & value is",email);
+    }
 }
