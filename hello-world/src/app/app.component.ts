@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-viewmode="map";
+  viewMode="map";
 
   course=[1,2,3,4];
 
