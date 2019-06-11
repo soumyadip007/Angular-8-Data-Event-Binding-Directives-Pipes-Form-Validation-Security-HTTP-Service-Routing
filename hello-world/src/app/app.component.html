@@ -1,9 +1,22 @@
 <h1>Welcome to {{post.title}}</h1>
 
+<h3>---------------------Directive---------------------</h3>
+<div *ngIf="course.length>0">
+<h4>List > 0  *ngIf="course.length>0</h4>
+</div>
+
+<div *ngIf="course.length>0; then yes else no"></div>
+<ng-template #yes>
+    <h4>List > 0  *ngIf="course.length>0; then yes else no"</h4>
+</ng-template>
+<ng-template #no>
+    <h4>List == 0</h4>
+</ng-template>
+
 
 
 
 <br><br><br><br><br><br><br><br>
-<h3>Basic</h3>
+<h3>---------------------Basic---------------------</h3>
 <courses></courses>
 <favorite></favorite>
