@@ -5,8 +5,8 @@ import { CoursesService } from './courses.service';
     selector: 'courses' ,     // <div class="courses"> --->   .courses  & # for id
     template: ` <h2>{{getTitle() }} or  {{title}} </h2>
      <ul>   <li *ngFor="let x of courses">{{x}} </li>   </ul>
-     
-     
+     <button class="btn btn-primary">Save</button>
+    
      `
 })
 export class CourseComponent{
