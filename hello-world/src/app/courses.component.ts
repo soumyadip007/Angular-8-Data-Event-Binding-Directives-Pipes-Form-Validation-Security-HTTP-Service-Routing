@@ -11,11 +11,13 @@ import { CoursesService } from './courses.service';
         <button class="btn btn-primary"  (click)="onClick($event)" >Event binding</button>
      </div>
      <br><br>
-    <input class="form-control" #email (keyup.enter)="onKeyUpp(email.value)"  /> 
+    <input class="form-control" [value]="email" (keyup.enter)="email=$event.target.value;   onKeyUpp()"  /> 
      `
 })
 export class CourseComponent{
 
+
+    
     title="List of courses"
     getTitle(){
 
@@ -43,13 +45,23 @@ export class CourseComponent{
          console.log("Div is clicked");
      }
 
+    // <input class="form-control"  (keyup.enter)="onKeyUpp($event)"  /> 
     //  onKeyUpp($event)
     //  {
     //      console.log("Enter is pressed & value is",$event.target.value);
     //  }
     
-    onKeyUpp(email)
+
+    // <input class="form-control" #email (keyup.enter)="onKeyUpp(email.value)"  /> 
+    // onKeyUpp(email)
+    // {
+    //     console.log("Enter is pressed & value is",email);
+    // }
+
+    email="soumyadip.note@gmail.com";  //preplotted value
+
+    onKeyUpp()
     {
-        console.log("Enter is pressed & value is",email);
+        console.log(this.email)
     }
 }
