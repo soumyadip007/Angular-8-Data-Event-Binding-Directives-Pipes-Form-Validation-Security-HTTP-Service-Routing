@@ -12,6 +12,10 @@
 <ng-template #no>
     <h4>List == 0</h4>
 </ng-template>
+<ng-template [ngIf]="course.length>0">
+        <h4>List > 0 [ngIf]="course.length>0"></h4>
+    </ng-template>
+
 
 <div [hidden]="course.length>0">
     <h4>List == 0</h4>

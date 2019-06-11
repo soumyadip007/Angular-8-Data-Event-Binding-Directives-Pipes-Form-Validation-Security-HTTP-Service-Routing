@@ -39,12 +39,12 @@ onRemove(course)
 
 loadCourses()
 {
- 
 this.course=[
   {id:1, name: 'C'},
   {id:2, name: 'Java'},
   {id:3, name: 'CPP'}
 ];
 }
+
 
 }
