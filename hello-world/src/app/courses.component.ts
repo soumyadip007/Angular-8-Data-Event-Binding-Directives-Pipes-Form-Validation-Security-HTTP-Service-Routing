@@ -12,6 +12,10 @@ import { CoursesService } from './courses.service';
      </div>
      <br><br>
     <input class="form-control" [value]="email" (keyup.enter)="email=$event.target.value;   onKeyUpp()"  /> 
+    <br><br>
+    <input class="form-control" [(ngModel)]="email" (keyup.enter)="onKeyUpp()"  /> 
+    
+
      `
 })
 export class CourseComponent{
