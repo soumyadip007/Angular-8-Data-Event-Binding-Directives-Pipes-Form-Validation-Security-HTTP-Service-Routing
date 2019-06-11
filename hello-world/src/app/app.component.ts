@@ -20,4 +20,9 @@ export class AppComponent {
   title : 'Angular App',
   isFavorite: true
 }
+
+onAdd()
+{
+  this.course.push( {id: 4, name: 'JS'});
+}
 }
