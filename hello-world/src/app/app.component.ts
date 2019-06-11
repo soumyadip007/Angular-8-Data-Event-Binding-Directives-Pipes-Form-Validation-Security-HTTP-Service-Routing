@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   post={
   title : 'Angular App',
-  isFav: true
+  isFavorite: true
 }
 }
