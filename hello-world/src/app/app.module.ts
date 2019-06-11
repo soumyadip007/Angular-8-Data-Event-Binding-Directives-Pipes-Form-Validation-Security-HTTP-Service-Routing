@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { custom } from './custom.pipe';
-import { FavouriteComponent } from './favourite/favourite.component';
+//import { FavouriteComponent } from './favourite/favourite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
     custom,
-    FavouriteComponent,
+  //  FavouriteComponent,
     
 
   ],
