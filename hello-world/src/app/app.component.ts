@@ -25,4 +25,12 @@ onAdd()
 {
   this.course.push( {id: 4, name: 'JS'});
 }
+
+onRemove(course)
+{
+  let index=this.course.indexOf( course);
+this.course.splice(index,1);
+
+}
+
 }
