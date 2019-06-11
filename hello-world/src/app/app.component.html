@@ -26,8 +26,9 @@
     <div *ngSwitchCase="'map'"><h3>Map View Control</h3></div>
     <div *ngSwitchCase="'list'"><h4>List View Control</h4></div>
 </div>
+<br><br><br>
 
-
+<button class="btn btn-primary"  (click)="onAdd" >Class binding </button>
 <ul>   <li *ngFor="let x of course">{{x.id}}---->{{x.name}} </li>   </ul>
 
 
