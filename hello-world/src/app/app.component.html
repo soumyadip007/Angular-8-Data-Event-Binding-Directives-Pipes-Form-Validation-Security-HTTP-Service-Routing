@@ -20,10 +20,13 @@
 
 
 <ul class="nav nav-pills">
-    <li [class.active]="active"><a href="'MapView'">Map View Control</a></li>
-    <li class="active"><a href="'MapView'">Map View Control</a></li>
-
+    <li [class.active]="viewmode=='map'"><a (click)="viewmode=='map'">Map View</a></li>
+    <li [class.active]="viewmode=='map'"><a (click)="viewmode=='list'">List View</a></li>
 </ul>
+<div [ngSwitch]="viewmode">
+    <div *ngSwitchCase="'map'">Map View Control</div>
+    <div *ngSwitchCase="'list'">List View Control</div>
+</div>
 
 <br><br><br><br><br><br><br><br>
 
