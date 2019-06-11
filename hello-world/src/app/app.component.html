@@ -23,26 +23,8 @@
     <li class="btn btn-primary" [class.Sactive]="viewMode == 'list'"><a (click)="viewMode ='list'">List View     .</a></li>
 </ul>
 <div [ngSwitch]="viewMode">
-    <div *ngSwitchCase="'map'">
-        
-<div *ngIf="course.length>0; then yes else no"></div>
-<ng-template #yes>
-    <h4>List > 0  *ngIf="course.length>0; then yes else no"</h4>
-</ng-template>
-<ng-template #no>
-    <h4>List == 0</h4>
-</ng-template>
-        Map View Control</div>
-    <div *ngSwitchCase="'list'">
-        
-<div *ngIf="course.length>0; then yes else no"></div>
-<ng-template #yes>
-    <h4>List > 0  </h4>
-</ng-template>
-<ng-template #no>
-    <h4>List == 0</h4>
-</ng-template>
-        List View Control</div>
+    <div *ngSwitchCase="'map'">Map View Control</div>
+    <div *ngSwitchCase="'list'">List View Control</div>
 </div>
 
 
