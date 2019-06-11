@@ -22,7 +22,10 @@ import { CoursesService } from './courses.service';
     {{ course.price | currency:'INR':true:'3.2' }}<br>
     {{ course.releaseDate | date:'shortDate' }}<br>
 
-
+    <br><br>
+    <h4>---------------CUSTOM PIPES------------------</h4>
+    {{ text.hello | custom:10 }}<br>
+  
      `
 })
 export class CourseComponent{
@@ -85,4 +88,13 @@ export class CourseComponent{
         price: 199.77,
         releaseDate : new Date(2019, 2, 19)
     }
+
+      //----------------------CUSTOM PIPES-----------------------------------//
+
+    text={
+
+        hello: " Welcome to angular"
+
+    }
+
 }

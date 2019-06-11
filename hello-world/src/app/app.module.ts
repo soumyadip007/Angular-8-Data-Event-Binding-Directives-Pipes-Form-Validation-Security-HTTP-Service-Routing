@@ -5,11 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './courses.component';
 import { CoursesService } from './courses.service';
+import { custom } from './custom.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseComponent
+    CourseComponent,
+    custom
 
   ],
   imports: [
