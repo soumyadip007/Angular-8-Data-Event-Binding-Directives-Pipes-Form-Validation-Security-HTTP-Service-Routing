@@ -29,7 +29,13 @@
 <br><br><br>
 
 <button class="btn btn-primary"  (click)="onAdd()" >Add</button>
-<ul>   <li *ngFor="let x of course">{{x.id}}---->{{x.name}} </li>   </ul>
+<ul> 
+      <li *ngFor="let x of course">
+          {{x.id}}---->{{x.name}} 
+          <button class="btn btn-danger"  (click)="onRemove(x)" >Remove</button>
+          <br><br>
+      </li>   
+</ul>
 
 
 <br><br><br><br><br><br><br><br>
