@@ -7,6 +7,7 @@ import { CourseComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { custom } from './custom.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
     custom,
     FavoriteComponent,
    FavoriteComponent,
+   InputFormatDirective,
     
 
   ],
