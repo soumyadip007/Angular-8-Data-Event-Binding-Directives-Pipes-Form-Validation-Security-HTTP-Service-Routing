@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,13 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FavouriteComponent implements OnInit {
 
-  @Input('isFav') isFav: boolean;
+  @Input('is-Fav') isFav: boolean;
 
 
   constructor() { }
 
   ngOnInit() {
   }
+
    onClick()
    {
      this.isFav = !this.isFav;
