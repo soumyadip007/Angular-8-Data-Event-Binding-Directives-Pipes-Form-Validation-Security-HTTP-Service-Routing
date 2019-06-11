@@ -28,8 +28,9 @@ onAdd()
 
 onRemove(course)
 {
-  let index=this.course.indexOf( course);
-this.course.splice(index,1);
+//  let index=this.course.indexOf( course);
+//  this.course.splice(index,1);
+course.name="Updated";
 
 }
 
