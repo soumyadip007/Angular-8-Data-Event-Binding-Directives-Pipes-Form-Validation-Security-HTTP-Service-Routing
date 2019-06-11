@@ -16,17 +16,17 @@
 <div [hidden]="course.length>0">
     <h4>List == 0</h4>
  </div>
+ <br><br><br>
 
-
-
-<ul class="nav nav-pills">
-    <li [class.active]="viewmode=='map'"><a (click)="viewmode=='map'">Map View</a></li>
-    <li [class.active]="viewmode=='map'"><a (click)="viewmode=='list'">List View</a></li>
+ <ul class="nav nav-pills">
+    <li [class.active]="viewmode == 'map'"><a (click)="viewmode ='map'">Map View</a></li>
+    <li [class.active]="viewmode == 'list'"><a (click)="viewmode ='list'">List View</a></li>
 </ul>
 <div [ngSwitch]="viewmode">
     <div *ngSwitchCase="'map'">Map View Control</div>
     <div *ngSwitchCase="'list'">List View Control</div>
 </div>
+
 
 <br><br><br><br><br><br><br><br>
 
