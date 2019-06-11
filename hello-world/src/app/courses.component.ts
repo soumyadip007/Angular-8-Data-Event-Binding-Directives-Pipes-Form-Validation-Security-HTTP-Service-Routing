@@ -3,7 +3,11 @@ import { CoursesService } from './courses.service';
 
 @Component({
     selector: 'courses' ,     // <div class="courses"> --->   .courses  & # for id
-    template: ' <h2>{{getTitle() }} or  {{title}} </h2> <ul>   <li *ngFor="let x of courses">{{x}} </li></ul>'
+    template: ` <h2>{{getTitle() }} or  {{title}} </h2>
+     <ul>   <li *ngFor="let x of courses">{{x}} </li>   </ul>
+     
+     
+     `
 })
 export class CourseComponent{
 
