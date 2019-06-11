@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+viewmode="map";
+
   course=[1,2,3,4];
 
   post={
