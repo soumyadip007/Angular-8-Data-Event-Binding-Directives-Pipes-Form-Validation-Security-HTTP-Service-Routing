@@ -10,7 +10,11 @@ export class AppComponent {
 
   viewMode="map";
 
-  course=[1,2,3,4];
+  course=[
+    {id:1, name: 'C'},
+    {id:2, name: 'Java'},
+    {id:3, name: 'CPP'}
+  ];
 
   post={
   title : 'Angular App',
