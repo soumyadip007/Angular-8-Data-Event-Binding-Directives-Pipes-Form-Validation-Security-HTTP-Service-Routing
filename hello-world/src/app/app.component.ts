@@ -10,12 +10,14 @@ export class AppComponent {
 
   viewMode="map";
 
-  course=[
-    {id:1, name: 'C'},
-    {id:2, name: 'Java'},
-    {id:3, name: 'CPP'}
-  ];
+  // course=[
+  //   {id:1, name: 'C'},
+  //   {id:2, name: 'Java'},
+  //   {id:3, name: 'CPP'}
+  // ];
 
+  course;
+  
   post={
   title : 'Angular App',
   isFavorite: true
@@ -32,6 +34,17 @@ onRemove(course)
   this.course.splice(index,1);
 //  course.name="Updated";
 
+}
+
+
+loadCourses()
+{
+ 
+this.course=[
+  {id:1, name: 'C'},
+  {id:2, name: 'Java'},
+  {id:3, name: 'CPP'}
+];
 }
 
 }
