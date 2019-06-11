@@ -14,7 +14,14 @@ import { CoursesService } from './courses.service';
     <input class="form-control" [value]="email" (keyup.enter)="email=$event.target.value;   onKeyUpp()"  /> 
     <br><br>
     <input class="form-control" [(ngModel)]="email" (keyup.enter)="onKeyUpp()"  /> 
-    
+    <br><br>
+    <h4>---------------PIPES------------------</h4>
+    {{ course.title | uppercase }}<br>
+    {{ course.rating |number:'2.2-2' }}<br>
+    {{ course.students | number }}<br>
+    {{ course.price | currency:'INR':true:'3.2' }}<br>
+    {{ course.releaseDate | date:'shortDate' }}<br>
+
 
      `
 })
@@ -67,5 +74,15 @@ export class CourseComponent{
     onKeyUpp()
     {
         console.log(this.email)
+    }
+
+    //----------------------PIPES-----------------------------------//
+
+    course = {
+        title: "Welcome to Angular",
+        rating: 5.989,
+        students: 30400,
+        price: 199.77,
+        releaseDate : new Date(2019, 2, 19)
     }
 }
