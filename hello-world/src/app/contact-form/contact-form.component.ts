@@ -17,6 +17,7 @@ export class ContactFormComponent {
 
   submit(f)
   {
+    f.value
     console.log(f);
   }
   }
