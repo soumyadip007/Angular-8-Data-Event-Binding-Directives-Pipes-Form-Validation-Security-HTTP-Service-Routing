@@ -1,3 +1,6 @@
+<contact-form>
+</contact-form>
+<!--
 <h1>Welcome to {{post.title}}</h1>
 
 <h3>---------------------Directive---------------------</h3>
@@ -37,15 +40,15 @@
 <button class="btn btn-primary"  (click)="onAdd()" >Add</button>
 <ul> 
       <li *ngFor="let x of course">
-          {{x.id}}---->{{x.name}} 
+          {{x.id}}------{{x.name}} 
           <button class="btn btn-danger"  (click)="onRemove(x)" >Remove</button>
           <br><br>
       </li>   
 </ul>
-<!--
+////////
 <span *ngIf="task.assignee">{{task.assignee.name}}</span>
 <span >{{task.assignee?.name}}</span>
--->
+////////S
 
 <input type="text" [appInputFormat]="'uppercase'">
 
@@ -54,4 +57,4 @@
 <br><br><br><br><br><br><br><br>
 
 <courses></courses>  Calling courses.compoment.ts
-<favorite></favorite>
+<favorite></favorite>-->
