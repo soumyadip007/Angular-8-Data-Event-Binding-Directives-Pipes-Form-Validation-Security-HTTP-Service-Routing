@@ -2,14 +2,24 @@
 
 <div class="form-group">
 <label  for="firstName">First Name</label>
-<input ngModel name="firstName" id="firstName"  #firstName="ngModel" (change)="log(firstName)" type="text" class="form-control">
+<input required minlength="3"  maxlength="10" pattern="x" ngModel name="firstName" id="firstName" 
+ #firstName="ngModel" (change)="log(firstName)" type="text" class="form-control">
+
+ <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name not valid</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.required">First name required</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.minlength">First name min 3</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.maxlength">First name max 10</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.pattern">java must be there</div>
+
 </div>
 
 
 <div class="form-group">
     <label  for="lastName">Last Name</label>
-    <input  ngModel name="lastName"  id="lastName" type="text" class="form-control">
-    </div>
+    <input required  ngModel  name="lastName"  id="lastName" #lastName="ngModel"
+     type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">Last name not valid</div>
+  </div>
 
     <button class="btn btn-primary">Submit</button>
 
