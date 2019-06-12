@@ -13,7 +13,6 @@ export class ContactFormComponent {
   {
     console.log(x);
   }
-  
 
   submit(f)
   {
