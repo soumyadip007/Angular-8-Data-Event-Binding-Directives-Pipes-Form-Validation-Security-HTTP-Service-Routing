@@ -15,4 +15,8 @@ export class ContactFormComponent {
   }
   
 
-}
+  submit(f)
+  {
+    console.log(f);
+  }
+  }

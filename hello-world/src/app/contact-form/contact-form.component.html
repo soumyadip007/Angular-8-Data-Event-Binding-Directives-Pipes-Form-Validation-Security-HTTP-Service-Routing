@@ -1,9 +1,19 @@
-<form>
+<form #f="ngForm" (ngSubmit)="submit(f)"> 
 
 <div class="form-group">
 <label  for="firstName">First Name</label>
-<input required minlength="3"  maxlength="10" pattern="x" ngModel name="firstName" id="firstName" 
- #firstName="ngModel" (change)="log(firstName)" type="text" class="form-control">
+<input required
+ minlength="3"
+  maxlength="10"
+  pattern="xxxx" 
+   ngModel 
+
+   name="firstName"
+    id="firstName" 
+ #firstName="ngModel" 
+ (change)="log(firstName)"
+  type="text" 
+  class="form-control">
 
  <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name not valid</div>
  <div class="alert alert-danger" *ngIf="firstName.errors.required">First name required</div>
