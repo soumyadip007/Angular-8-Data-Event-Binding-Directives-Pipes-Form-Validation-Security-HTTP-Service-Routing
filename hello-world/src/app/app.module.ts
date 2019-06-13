@@ -21,9 +21,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     FavoriteComponent,
    FavoriteComponent,
    InputFormatDirective,
-   ContactFormComponent,
-    
-
+   ContactFormComponent
   ],
   imports: [
     BrowserModule,
