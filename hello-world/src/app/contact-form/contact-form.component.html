@@ -1,15 +1,12 @@
 <form #f="ngForm" (ngSubmit)="submit(f)"> 
-<div ngModelGroup="contact">
-
-  
-</div>
-
 
 <div class="form-group">
 <label  for="firstName">First Name</label>
 <input 
+required
+minlength="3"
+maxlength="10"
    ngModel 
-
    name="firstName"
     id="firstName" 
  #firstName="ngModel" 
@@ -19,8 +16,8 @@
 
  <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name not valid</div>
  <div class="alert alert-danger" *ngIf="firstName.errors.required">First name required</div>
- <div class="alert alert-danger" *ngIf="firstName.errors.minlength">First name min 3</div>
- <div class="alert alert-danger" *ngIf="firstName.errors.maxlength">First name max 10</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.minlength">min length 3</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.maxlength">max length 10</div>
  <div class="alert alert-danger" *ngIf="firstName.errors.pattern">java must be there</div>
 
 </div>
@@ -33,6 +30,6 @@
     <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">Last name not valid</div>
   </div>
 
-    <button class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary" [disabled]="!f.valid" >Submit</button>
 
 </form>
