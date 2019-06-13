@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ContactFormComponent {
 
 
+  Contact=[
+    {id:1,name:"Email"},
+    {id:2,name:"Phone"},
+    {id:3,name:"Fax"}
+  ];
   
   log(x)
   {

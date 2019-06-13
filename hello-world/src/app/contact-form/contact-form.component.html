@@ -38,6 +38,16 @@ maxlength="10"
       <input ngModel  name="thisIsCheckbox"  type="checkbox">Subscribe
       </label>
     </div>
+
+    <div class="form-group">
+        <label  for="Contact">
+          <select ngModel name="Contact" id="Contact" class="form-control">
+            <option *ngFor="let x of Contact" [value]="x.id">{{x.name}} </option>
+
+          </select>
+        </label>
+         </div>
+div.form-control>label[for=""]+select[id="Contact"].form-control     
 <p>
   {{f.value| json}}
 </p>
