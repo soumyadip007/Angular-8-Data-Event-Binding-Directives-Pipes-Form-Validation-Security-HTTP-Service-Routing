@@ -2,10 +2,19 @@
 
 <div class="form-group">
 <label  for="firstName">First Name</label>
-<input 
-required
+<!-- 
+  required
 minlength="3"
 maxlength="10"
+
+ <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name not valid</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.required">First name required</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.minlength">min length 3</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.maxlength">max length 10</div>
+ <div class="alert alert-danger" *ngIf="firstName.errors.pattern">java must be there</div>
+-->
+<input 
+
    ngModel 
    name="firstName"
     id="firstName" 
@@ -14,21 +23,24 @@ maxlength="10"
   type="text" 
   class="form-control">
 
- <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name not valid</div>
- <div class="alert alert-danger" *ngIf="firstName.errors.required">First name required</div>
- <div class="alert alert-danger" *ngIf="firstName.errors.minlength">min length 3</div>
- <div class="alert alert-danger" *ngIf="firstName.errors.maxlength">max length 10</div>
- <div class="alert alert-danger" *ngIf="firstName.errors.pattern">java must be there</div>
-
 </div>
 
 
 <div class="form-group">
     <label  for="lastName">Last Name</label>
-    <input required  ngModel  name="lastName"  id="lastName" #lastName="ngModel"
+    <input   ngModel  name="lastName"  id="lastName" #lastName="ngModel"
      type="text" class="form-control">
     <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">Last name not valid</div>
   </div>
+
+  <div class="checkbox">
+      <label>
+      <input ngModel  name="thisIsCheckbox"  type="checkbox">Subscribe
+      </label>
+    </div>
+<p>
+  {{f.value| json}}
+</p>
 
     <button class="btn btn-primary" [disabled]="!f.valid" >Submit</button>
 
