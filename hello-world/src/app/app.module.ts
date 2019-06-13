@@ -14,14 +14,13 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     SignupFormComponent,
     CourseComponent,
     custom,
     FavoriteComponent,
    FavoriteComponent,
    InputFormatDirective,
-   ContactFormComponent
+   ContactFormComponent,
   ],
   imports: [
     BrowserModule,
