@@ -9,9 +9,11 @@ import { custom } from './custom.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from "./contact-form/ContactFormComponent";
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
+    SignupFormComponent,
     AppComponent,
     CourseComponent,
     custom,
