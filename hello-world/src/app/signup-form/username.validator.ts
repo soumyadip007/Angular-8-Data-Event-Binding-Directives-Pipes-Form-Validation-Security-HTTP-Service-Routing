@@ -8,5 +8,6 @@ export class UsernameValidators{
         {
             return {cannotContainSpace: true}
         }
+        return null;
     }
 }
