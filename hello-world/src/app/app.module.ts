@@ -13,8 +13,9 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
-    SignupFormComponent,
     AppComponent,
+    
+    SignupFormComponent,
     CourseComponent,
     custom,
     FavoriteComponent,
