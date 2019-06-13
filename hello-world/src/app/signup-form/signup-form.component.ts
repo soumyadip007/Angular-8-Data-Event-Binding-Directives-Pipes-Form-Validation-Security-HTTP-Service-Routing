@@ -14,7 +14,7 @@ export class SignupFormComponent {
     {
       username : new FormControl('',[
         Validators.required,
-        UsernameValidators.cannotContainSpace;
+     //   UsernameValidators.cannotContainSpace
 
       ]),
       password : new FormControl()
