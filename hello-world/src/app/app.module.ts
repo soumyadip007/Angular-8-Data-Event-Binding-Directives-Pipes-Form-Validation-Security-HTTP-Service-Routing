@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms' ;
+import { FormsModule, ReactiveFormsModule } from '@angular/forms' ;
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -9,21 +9,25 @@ import { custom } from './custom.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from "./contact-form/ContactFormComponent";
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
+    SignupFormComponent,
     AppComponent,
     CourseComponent,
     custom,
     FavoriteComponent,
    FavoriteComponent,
    InputFormatDirective,
-   ContactFormComponent, 
+   ContactFormComponent,
+    
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ CoursesService],
   bootstrap: [AppComponent]
