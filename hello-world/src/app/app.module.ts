@@ -13,7 +13,6 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
-    SignupFormComponent,
     AppComponent,
     CourseComponent,
     custom,
@@ -22,6 +21,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
    InputFormatDirective,
    ContactFormComponent,
     
+   SignupFormComponent
 
   ],
   imports: [
