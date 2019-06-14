@@ -1,6 +1,3 @@
-export class NotFoundError{
+import { AppError } from './app-error';
 
-    constructor(public originalError?: any){
-
-    }
-}
+export class NotFoundError extends AppError {}
