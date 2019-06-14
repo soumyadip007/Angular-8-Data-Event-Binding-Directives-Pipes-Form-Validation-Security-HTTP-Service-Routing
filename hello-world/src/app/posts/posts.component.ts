@@ -28,8 +28,12 @@ export class PostsComponent implements OnInit  {
     .subscribe( response => {
       this.posts=response.json();
       console.log(response.json());
- 
-    });
+    },
+    error=>{
+      alert('An unexpected error occured.');
+      console.log(error);
+    }
+    );
   }
 
   createPost(input : HTMLInputElement)
