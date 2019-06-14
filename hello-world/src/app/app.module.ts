@@ -13,6 +13,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpModule} from '@angular/http';
 import { PostService } from './services/post.service';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubFollowersService } from './services/github-followers.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { PostService } from './services/post.service';
    ContactFormComponent,
    SignupFormComponent,
    PostsComponent,
+   GithubFollowersComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { PostService } from './services/post.service';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [ CoursesService,PostService],
+  providers: [ CoursesService,PostService,GithubFollowersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
