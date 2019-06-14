@@ -11,9 +11,9 @@ export class PostsComponent  {
 
   constructor(http : Http) {
 
-    http.get('https://jsonplaceholder.typicode.com/posts'
+    http.get('https://jsonplaceholder.typicode.com/posts' )
     .subscribe( response => {
-      console.log.json();
+      console.log(response.json());
     });
 
   }
