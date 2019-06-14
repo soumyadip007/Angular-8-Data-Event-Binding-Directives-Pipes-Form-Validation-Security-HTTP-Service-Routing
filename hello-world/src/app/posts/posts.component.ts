@@ -14,7 +14,7 @@ export class PostsComponent  {
 
   constructor(private http : Http) {
 
-    http.get('http://localhost:8080/spring-crm-rest/api/customers' )
+    http.get('https://jsonplaceholder.typicode.com/posts' )
     .subscribe( response => {
       this.posts=response.json();
       console.log(response.json());
