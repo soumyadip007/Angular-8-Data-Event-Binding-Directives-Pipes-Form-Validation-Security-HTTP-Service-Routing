@@ -9,6 +9,7 @@ import { AppError } from './common/app-error';
 import { BadInput } from './common/bad-input';
 import { NotFoundError } from './common/not-found-error';
 import { custom } from 'src/app/custom.pipe'
+import { GithubFollowersService } from './services/github-followers.service';
 
 
 
@@ -16,9 +17,6 @@ import { custom } from 'src/app/custom.pipe'
   declarations: [
     AppComponent,
     GithubFollowersComponent,
-    AppError,
-    BadInput,
-    NotFoundError,
     custom,
   ],
  
@@ -28,7 +26,7 @@ import { custom } from 'src/app/custom.pipe'
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ GithubFollowersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
