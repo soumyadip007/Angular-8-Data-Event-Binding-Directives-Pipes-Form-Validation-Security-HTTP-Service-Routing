@@ -12,6 +12,7 @@ import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpModule} from '@angular/http';
+import { PostService } from './post.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { HttpModule} from '@angular/http';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [ CoursesService],
+  providers: [ CoursesService,PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
