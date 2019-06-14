@@ -46,7 +46,16 @@ export class PostsComponent implements OnInit  {
       post['id']= response.json().id;
       this.posts.splice(0,0,post);
       console.log(response.json());
-    });
+    },(error: Response)=>{
+      if(error.status === 400)
+     //   this.form.setErrors(error.json());
+      else
+        alert('An unexpected error occured.');
+        console.log(error);
+    }
+
+
+    );
   }
 
   updatePost(post)
