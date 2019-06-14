@@ -1,3 +1,5 @@
+
+import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
-export class PostsComponent implements OnInit {
+export class PostsComponent  {
 
-  constructor() { }
+  constructor(http : Http) {
 
-  ngOnInit() {
+    http.get('https://jsonplaceholder.typicode.com/posts'
+    .subscribe( response => {
+      console.log.json();
+    });
+
   }
-
 }

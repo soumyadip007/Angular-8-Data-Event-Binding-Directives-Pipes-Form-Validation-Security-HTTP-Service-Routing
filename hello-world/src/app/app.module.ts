@@ -11,7 +11,7 @@ import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { PostsComponent } from './posts/posts.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpModule
   ],
   providers: [ CoursesService],
   bootstrap: [AppComponent]
