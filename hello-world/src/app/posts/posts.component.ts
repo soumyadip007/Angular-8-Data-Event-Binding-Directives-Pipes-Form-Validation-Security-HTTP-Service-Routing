@@ -68,6 +68,12 @@ export class PostsComponent implements OnInit  {
       let index= this.posts.indexOf(post);
       this.posts.splice(index,1);
       console.log(response.json());
+    }, (error: Response)=>{
+      if(error.status == 404)
+        alert('This method already deleted.');
+      else
+      alert('An unexpected error occured.');
+        console.log(error);
     });
   }
 
