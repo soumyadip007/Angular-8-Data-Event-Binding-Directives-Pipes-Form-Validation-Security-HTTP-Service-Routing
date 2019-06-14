@@ -1,6 +1,11 @@
 
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+import { Observable } from 'rxjs';
+import { AppError } from '../common/app-error';
+
 
 @Injectable()
 export class PostService   {
@@ -29,5 +34,11 @@ export class PostService   {
   deletePost(id)
   {
   return this.http.delete(this.url+'/'+id);
+  // .
+  // catch((error : Response)=>{
+  //       ret
+
+  //  return Observable.throw(new AppError());
+  // });
   }
 }   

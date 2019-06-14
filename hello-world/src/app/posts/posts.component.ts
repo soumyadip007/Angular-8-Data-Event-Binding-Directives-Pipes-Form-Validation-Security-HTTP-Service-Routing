@@ -48,9 +48,9 @@ export class PostsComponent implements OnInit  {
       console.log(response.json());
     },(error: Response)=>{
       if(error.status === 400)
-     //   this.form.setErrors(error.json());
+        alert('This method already deleted.');
       else
-        alert('An unexpected error occured.');
+      alert('An unexpected error occured.');
         console.log(error);
     }
 
@@ -77,7 +77,8 @@ export class PostsComponent implements OnInit  {
       let index= this.posts.indexOf(post);
       this.posts.splice(index,1);
       console.log(response.json());
-    }, (error: Response)=>{
+    }, (error: Response)=>
+    {
       if(error.status === 404)
         alert('This method already deleted.');
       else
