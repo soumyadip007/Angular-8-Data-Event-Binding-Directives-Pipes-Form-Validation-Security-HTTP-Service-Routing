@@ -1,5 +1,5 @@
-import { NotFoundError } from './../common/not-found-error';
 import { BadInput } from './../common/bad-input';
+import { NotFoundError } from './../common/not-found-error';
 import { AppError } from './../common/app-error';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
@@ -17,6 +17,12 @@ export class DataService {
     return this.http.get(this.url)
       .map(response => response.json())
       .catch(this.handleError);
+  }
+
+  get(id) { 
+    return this.http.get(this.url + '/' + id)
+      .map(response => response.json())
+      .catch(this.handleError);    
   }
 
   create(resource) {
@@ -48,5 +54,3 @@ export class DataService {
     return Observable.throw(new AppError(error));
   }
 }
-
-
