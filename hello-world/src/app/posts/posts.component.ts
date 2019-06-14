@@ -63,13 +63,13 @@ export class PostsComponent implements OnInit  {
   {
 
     //this.http.delete(this.url+'/'+post.id)
-    this.service.updatePost(post)
+    this.service.updatePost(post.id)
     .subscribe( response => {
       let index= this.posts.indexOf(post);
       this.posts.splice(index,1);
       console.log(response.json());
     }, (error: Response)=>{
-      if(error.status == 404)
+      if(error.status === 404)
         alert('This method already deleted.');
       else
       alert('An unexpected error occured.');
