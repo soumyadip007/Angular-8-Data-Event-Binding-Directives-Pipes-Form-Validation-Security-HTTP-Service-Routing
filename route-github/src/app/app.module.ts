@@ -21,7 +21,6 @@ import { custom } from 'src/app/custom.pipe'
     BadInput,
     NotFoundError,
     custom,
-    InputDeviceInfo,
   ],
  
   imports: [
