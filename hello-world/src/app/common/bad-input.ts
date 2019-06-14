@@ -1,6 +1,7 @@
 
-export class AppError{
+export class BadInput{
 
+    
     constructor(public originalError?: any){
 
     }

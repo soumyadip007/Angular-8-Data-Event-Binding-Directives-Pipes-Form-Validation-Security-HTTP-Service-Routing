@@ -1,5 +1,4 @@
-
-export class AppError{
+export class NotFoundError{
 
     constructor(public originalError?: any){
 
