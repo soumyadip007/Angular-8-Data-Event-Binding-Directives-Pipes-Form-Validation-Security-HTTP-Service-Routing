@@ -1,7 +1,7 @@
 
 //import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { PostService } from './../services/post.service';
 
 @Component({
   selector: 'posts',

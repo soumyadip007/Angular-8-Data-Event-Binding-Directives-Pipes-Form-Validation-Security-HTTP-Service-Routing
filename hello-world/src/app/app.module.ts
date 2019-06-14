@@ -12,7 +12,7 @@ import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpModule} from '@angular/http';
-import { PostService } from './post.service';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
