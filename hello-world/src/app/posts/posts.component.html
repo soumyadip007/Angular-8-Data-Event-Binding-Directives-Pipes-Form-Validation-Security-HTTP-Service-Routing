@@ -5,6 +5,9 @@ type="text" class="form-control">
   <li 
   *ngFor="let posts of posts"
   class="list-group-item">
+  <button
+  (click)="updatePost(posts)"
+  class="btn btn-default btn-sm">Update</button>
   {{posts.title}}
 </li>
 </ul>
