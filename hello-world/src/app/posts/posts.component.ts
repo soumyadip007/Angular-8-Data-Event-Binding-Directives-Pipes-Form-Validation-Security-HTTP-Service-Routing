@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-posts',
+  selector: 'posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
