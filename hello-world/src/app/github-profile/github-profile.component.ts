@@ -16,17 +16,15 @@ export class GithubProfileComponent {
       queryParams:{page:1, order: 'newest' }
     });
 
-  ngOnInit() {
-   this.route.paramMap.subscribe(params =>{});
+  // ngOnInit() {
+  //  this.route.paramMap.subscribe(params =>{});
    
-    this.route.paramMap
-    .subscribe(params =>{
-     let id= +params.get('id');
-      console.log(id);
-    });
-  }
-
- 
-  }
-
+  //   this.route.paramMap
+  //   .subscribe(params =>{
+  //    let id= +params.get('id');
+  //     console.log(id);
+  //   });
+  }  
 }
+
+
