@@ -24,19 +24,19 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CourseComponent,
-    custom,
-    FavoriteComponent,
-   FavoriteComponent,
-   InputFormatDirective,
-   ContactFormComponent,
-   SignupFormComponent,
-   PostsComponent,
-   NavbarComponent,
-   GithubFollowersComponent,
-   GithubProfileComponent,
-   HomeComponent,
+  AppComponent,
+  CourseComponent,
+  custom,
+  FavoriteComponent,
+  FavoriteComponent,
+  InputFormatDirective,
+  ContactFormComponent,
+  SignupFormComponent,
+  PostsComponent,
+  NavbarComponent,
+  GithubFollowersComponent,
+  GithubProfileComponent,
+  HomeComponent,
    NotFoundComponent,
   ],
   imports: [
@@ -48,6 +48,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
       {
          path:'', 
          component : HomeComponent},
+         {
+          path:'signup',
+          component : SignupFormComponent},
+          {
+            path:'contact',
+            component : ContactFormComponent},
+            {
+              path:'course',
+              component : CourseComponent},
       {
          path:'followers',
          component : GithubFollowersComponent},
