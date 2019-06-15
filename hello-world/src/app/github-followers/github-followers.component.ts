@@ -15,11 +15,13 @@ export class GithubFollowersComponent implements OnInit {
     private service: GithubFollowersService) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe();
-    let id=this.route.snapshot.paramMap.get('id');
+    this.route.paramMap.subscribe( =>
+
+    );
+  //  let id=this.route.snapshot.paramMap.get('id');
 
     this.route.queryParamMap.subscribe();
-    let page=this.route.snapshot.queryParamMap.get('page');
+    //let page=this.route.snapshot.queryParamMap.get('page');
 
     this.service.getAll()
       .subscribe(followers => this.followers = followers);
