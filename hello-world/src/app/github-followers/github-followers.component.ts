@@ -18,7 +18,8 @@ export class GithubFollowersComponent implements OnInit {
 
   ngOnInit() {
 
-     let obs= Observable.combineLatest([
+  //   let obs=
+   Observable.combineLatest([
         this.route.paramMap,
         this.route.queryParamMap
       ])
