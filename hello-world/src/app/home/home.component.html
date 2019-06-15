@@ -2,3 +2,51 @@
 <p>
   home works!
 </p>
+
+<h1>Welcome to {{post.title}}</h1>
+
+<h3>---------------------Directive---------------------</h3>
+<div *ngIf="course.length>0">
+<h4>List > 0  *ngIf="course.length>0</h4>
+</div>
+
+<div *ngIf="course.length>0; then yes else no"></div>
+<ng-template #yes>
+    <h4>List > 0  *ngIf="course.length>0; then yes else no"</h4>
+</ng-template>
+<ng-template #no>
+    <h4>List == 0</h4>
+</ng-template>
+<ng-template [ngIf]="course.length>0">
+        <h4>List > 0 [ngIf]="course.length>0"></h4>
+    </ng-template>
+
+
+<div [hidden]="course.length>0">
+    <h4>List == 0</h4>
+ </div>
+ <br><br><br>
+
+ <ul class="nav nav-pills">
+    <li class="btn btn-primary" [class.active]="viewMode == 'map'"><a (click)="viewMode ='map'">Map View       .</a></li>
+    <li class="btn btn-primary" [class.Sactive]="viewMode == 'list'"><a (click)="viewMode ='list'">List View     .</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'"><h3>Map View Control</h3></div>
+    <div *ngSwitchCase="'list'"><h4>List View Control</h4></div>
+</div>
+<br><br><br>
+
+<button class="btn btn-primary"  (click)="loadCourses()" >Load courses</button>
+<br><br>
+<button class="btn btn-primary"  (click)="onAdd()" >Add</button>
+<ul> 
+    <li *ngFor="let x of course">
+        {{x.id}}------{{x.name}} 
+        <button class="btn btn-danger"  (click)="onRemove(x)" >Remove</button>
+        <br><br>
+    </li>   
+</ul>
+
+
+<input type="text" [appInputFormat]="'uppercase'">
