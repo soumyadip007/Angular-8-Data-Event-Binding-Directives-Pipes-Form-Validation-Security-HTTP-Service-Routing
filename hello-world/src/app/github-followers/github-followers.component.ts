@@ -61,4 +61,3 @@ return this.service.getAll();
   //   this.service.getAll()
   //     .subscribe(followers => this.followers = followers);
   }
-}
