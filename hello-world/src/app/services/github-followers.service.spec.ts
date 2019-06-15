@@ -12,4 +12,4 @@ describe('GithubFollowersService', () => {
   it('should be created', inject([GithubFollowersService], (service: GithubFollowersService) => {
     expect(service).toBeTruthy();
   }));
-});
+}); 

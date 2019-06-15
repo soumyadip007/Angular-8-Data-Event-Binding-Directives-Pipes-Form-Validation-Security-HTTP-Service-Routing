@@ -15,6 +15,10 @@ import { HttpModule} from '@angular/http';
 import { PostService } from './services/post.service';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 import { GithubFollowersService } from './services/github-followers.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { GithubFollowersService } from './services/github-followers.service';
    ContactFormComponent,
    SignupFormComponent,
    PostsComponent,
+   NavbarComponent,
    GithubFollowersComponent,
+   GithubProfileComponent,
+   HomeComponent,
+   NotFoundComponent,
   ],
   imports: [
     BrowserModule,
