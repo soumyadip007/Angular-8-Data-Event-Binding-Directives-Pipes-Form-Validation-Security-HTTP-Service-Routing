@@ -21,25 +21,35 @@ export class GithubFollowersComponent implements OnInit {
      let obs= Observable.combineLatest([
         this.route.paramMap,
         this.route.queryParamMap
-      ]);
+      ])
+      .subscribe(combined =>{
+        let id=combined[0].get('id');
+        let page=combined[1].get('page');
+        
+       // this.service.getAll({ id: id, page: page});
 
-      obs.subscribe();
 
-    this.route.paramMap.subscribe(params=>{
+       this.service.getAll()
+       .subscribe(followers => this.followers = followers);
+      });
 
-    }
+  //     obs.subscribe();
+
+  //   this.route.paramMap.subscribe(params=>{
+
+  //   }
       
-    );
-  //  let id=this.route.snapshot.paramMap.get('id');
+  //   );
+  // //  let id=this.route.snapshot.paramMap.get('id');
 
-    this.route.queryParamMap.subscribe(params=>{
+  //   this.route.queryParamMap.subscribe(params=>{
       
-    }
+  //   }
       
-    );
-    //let page=this.route.snapshot.queryParamMap.get('page');
+  //   );
+  //   //let page=this.route.snapshot.queryParamMap.get('page');
 
-    this.service.getAll()
-      .subscribe(followers => this.followers = followers);
+  //   this.service.getAll()
+  //     .subscribe(followers => this.followers = followers);
   }
 }
