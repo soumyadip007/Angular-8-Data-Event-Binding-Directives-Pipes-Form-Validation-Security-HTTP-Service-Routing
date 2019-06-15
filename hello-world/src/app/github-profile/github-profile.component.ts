@@ -11,20 +11,22 @@ export class GithubProfileComponent {
 
   constructor( private route: Router) { }
 
-  // ngOnInit() {
-  //  this.route.paramMap.subscribe(params =>{});
-   
-  //   // this.route.paramMap
-  //   // .subscribe(params =>{
-  //   //  let id= +params.get('id');
-  //   //   console.log(id);
-  //   // });
-  // }
-
   submit(){
     this.route.navigate(['/followers'],{
       queryParams:{page:1, order: 'newest' }
     });
+
+  ngOnInit() {
+   this.route.paramMap.subscribe(params =>{});
+   
+    this.route.paramMap
+    .subscribe(params =>{
+     let id= +params.get('id');
+      console.log(id);
+    });
+  }
+
+ 
   }
 
 }
