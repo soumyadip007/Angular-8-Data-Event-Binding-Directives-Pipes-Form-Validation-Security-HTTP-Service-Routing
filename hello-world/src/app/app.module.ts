@@ -61,7 +61,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
          path:'followers',
          component : GithubFollowersComponent},
       { 
-        path:'followers/:id',
+        path:'followers/:id/:username',
          component : GithubProfileComponent},
      { 
         path:'posts',
