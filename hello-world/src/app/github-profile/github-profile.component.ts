@@ -23,7 +23,7 @@ export class GithubProfileComponent {
 
   submit(){
     this.route.navigate(['/followers'],{
-      queryParams:{page:1, older: 'newestd' }
+      queryParams:{page:1, order: 'newest' }
     });
   }
 
