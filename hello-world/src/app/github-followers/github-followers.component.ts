@@ -25,16 +25,22 @@ export class GithubFollowersComponent implements OnInit {
         this.route.paramMap,
         this.route.queryParamMap
       ])
-      .subscribe(combined =>{
+      .switchMap( combined =>{
         let id=combined[0].get('id');
         let page=combined[1].get('page');
+     
+return this.service.getAll();
+      })
+      // .subscribe(combined =>{
+      //   let id=combined[0].get('id');
+      //   let page=combined[1].get('page');
         
-       // this.service.getAll({ id: id, page: page});
+      //  // this.service.getAll({ id: id, page: page});
 
 
-       this.service.getAll()
+      //  this.service.getAll()
        .subscribe(followers => this.followers = followers);
-      });
+      };
 
   //     obs.subscribe();
 
