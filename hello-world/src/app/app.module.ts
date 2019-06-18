@@ -22,6 +22,7 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+
 @NgModule({
   declarations: [
   AppComponent,
